@@ -8,6 +8,7 @@
 
 #import "SoundListViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "SystemSoundLibrary-Swift.h"
 
 @interface SoundListViewController ()
 
@@ -82,7 +83,11 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = [[audioFileList objectAtIndex:indexPath.row] lastPathComponent];
+    NSURL* audioFileUrl = [audioFileList objectAtIndex:indexPath.row];
+            
+    cell.textLabel.text = [audioFileUrl lastPathComponent];
+    cell.textLabel.adjustsFontSizeToFitWidth = YES;
+    cell.textLabel.isCopyingEnabled = YES;
     return cell;
 }
 

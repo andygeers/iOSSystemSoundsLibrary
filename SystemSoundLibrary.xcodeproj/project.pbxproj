@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520F1C0424879A960084CD78 /* UILabel+Copyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520F1C0324879A960084CD78 /* UILabel+Copyable.swift */; };
 		8EA2C0901809BBBE004E4529 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA2C08F1809BBBE004E4529 /* Foundation.framework */; };
 		8EA2C0921809BBBE004E4529 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA2C0911809BBBE004E4529 /* CoreGraphics.framework */; };
 		8EA2C0941809BBBE004E4529 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA2C0931809BBBE004E4529 /* UIKit.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		520F1C0324879A960084CD78 /* UILabel+Copyable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Copyable.swift"; sourceTree = "<group>"; };
 		8EA2C08C1809BBBE004E4529 /* SystemSoundLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SystemSoundLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA2C08F1809BBBE004E4529 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8EA2C0911809BBBE004E4529 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,6 +128,7 @@
 				8EA2C0A41809BBBE004E4529 /* Main_iPad.storyboard */,
 				8EA2C0AA1809BBBE004E4529 /* Images.xcassets */,
 				8EA2C0961809BBBE004E4529 /* Supporting Files */,
+				520F1C0324879A960084CD78 /* UILabel+Copyable.swift */,
 			);
 			path = SystemSoundLibrary;
 			sourceTree = "<group>";
@@ -206,6 +209,10 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Anton Pauli";
 				TargetAttributes = {
+					8EA2C08B1809BBBE004E4529 = {
+						DevelopmentTeam = Z3XSP2ASRV;
+						LastSwiftMigration = 1150;
+					};
 					8EA2C0AF1809BBBE004E4529 = {
 						TestTargetID = 8EA2C08B1809BBBE004E4529;
 					};
@@ -216,6 +223,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -258,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EA2C0A01809BBBE004E4529 /* AppDelegate.m in Sources */,
+				520F1C0424879A960084CD78 /* UILabel+Copyable.swift in Sources */,
 				8EA2C09C1809BBBE004E4529 /* main.m in Sources */,
 				8EA2C0C91809BC76004E4529 /* SoundListViewController.m in Sources */,
 			);
@@ -396,14 +405,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Z3XSP2ASRV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SystemSoundLibrary/SystemSoundLibrary-Prefix.pch";
 				INFOPLIST_FILE = "SystemSoundLibrary/SystemSoundLibrary-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -414,14 +428,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Z3XSP2ASRV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SystemSoundLibrary/SystemSoundLibrary-Prefix.pch";
 				INFOPLIST_FILE = "SystemSoundLibrary/SystemSoundLibrary-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -430,6 +448,7 @@
 		8EA2C0C51809BBBE004E4529 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SystemSoundLibrary.app/SystemSoundLibrary";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -453,6 +472,7 @@
 		8EA2C0C61809BBBE004E4529 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SystemSoundLibrary.app/SystemSoundLibrary";
 				FRAMEWORK_SEARCH_PATHS = (
